@@ -20,6 +20,8 @@ import com.example.pankajnimgade.pankajtestapp.R;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.util.Calendar;
+import java.util.Date;
 
 import system.utils.PageConfiguration;
 
@@ -128,6 +130,7 @@ public class CreatePDF105Activity extends AppCompatActivity {
     }
 
     private void writeFooter(Canvas myCanvas, PdfDocument.Page page) {
+        // light color boarder
         int footer_left = PageConfiguration.MARGIN_LEFT;
         int footer_top = PageConfiguration.PAGE_HEIGHT - PageConfiguration.MARGIN_BOTTOM -
                 (PageConfiguration.MARGIN_BOTTOM / 2);
@@ -135,15 +138,33 @@ public class CreatePDF105Activity extends AppCompatActivity {
         int footer_bottom = PageConfiguration.PAGE_HEIGHT - PageConfiguration.MARGIN_BOTTOM;
         Rect rect_first = new Rect(footer_left, footer_top, footer_right, footer_bottom);
 
-        // light color
         myCanvas.drawRect(rect_first, getFooterPaintMediumColor());
 
-        int width = (rect_first.right - rect_first.left) * (2 / 3);
-        footer_left = PageConfiguration.MARGIN_LEFT + width;
-        Rect rect_second = new Rect(footer_left, footer_top, footer_right, footer_bottom);
-
+        // dark color boarder
+        float width = (rect_first.right - rect_first.left) * (2f / 3f);
+        int second_box_footer_left = PageConfiguration.MARGIN_LEFT + (int) width;
+        Rect rect_second = new Rect(second_box_footer_left, footer_top, footer_right,
+                footer_bottom);
         myCanvas.drawRect(rect_second, getFooterPaintHighColor());
 
+        // write Medtronic in Dark boarder
+        int medtronic_left = rect_second.left + ((rect_second.right - rect_second.left) / 2);
+        float medtronic_top = rect_second.top + ((rect_second.bottom - rect_second.top) * (2f /
+                3f));
+        myCanvas.drawText("Medtronic", medtronic_left, (int) medtronic_top,
+                getWhiteBoldColorPaint());
+
+        // write Patient information
+        int patient_info_left = rect_first.left +PageConfiguration.SPACING_BETWEEN_SECTION;
+        float patient_info_top = rect_first.top + PageConfiguration.SPACING_BETWEEN_SECTION;
+        myCanvas.drawText("Jhon Reacher", patient_info_left, (int) patient_info_top, getWhiteSmallPaint());
+        // write Patient information
+        patient_info_top += PageConfiguration.SPACING_BETWEEN_LINES;
+        Date date = Calendar.getInstance().getTime();
+
+        myCanvas.drawText(PageConfiguration.simpleDateFormat.format(date), patient_info_left,
+                (int)patient_info_top,
+                getWhiteSmallPaint());
 
     }
 
@@ -157,6 +178,21 @@ public class CreatePDF105Activity extends AppCompatActivity {
     private Paint getFooterPaintHighColor() {
         Paint paint = new Paint();
         paint.setColor(PageConfiguration.COLOR_BLUE_HIGH);
+        return paint;
+    }
+
+    private Paint getWhiteSmallPaint() {
+        Paint paint = new Paint();
+        paint.setColor(PageConfiguration.COLOR_WHITE);
+        paint.setTextSize(PageConfiguration.SMALL_FONT_SIZE);
+        return paint;
+    }
+
+    private Paint getWhiteBoldColorPaint() {
+        Paint paint = new Paint();
+        paint.setColor(PageConfiguration.COLOR_WHITE);
+        paint.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+        paint.setFakeBoldText(true);
         return paint;
     }
 }
