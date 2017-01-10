@@ -2,4 +2,8 @@
     <string name="app_name">PankajTestApp</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_example_one">ExampleOneActivity</string>
+      <string name="sm2_device_name"
+              expectSameForAllLanguages="true"
+              isApproved="true"
+              where="about: pump: device">SYNCHROMED<sup><small>&#8482;</small></sup> II</string>
 </resources>

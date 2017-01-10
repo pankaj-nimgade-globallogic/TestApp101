@@ -19,8 +19,14 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import test.activities.CreatePDF101Activity;
+import test.activities.CreatePDF103Activity;
+import test.activities.CreatePDF104Activity;
+import test.activities.CreatePDF105Activity;
+import test.activities.CreatePDFTableActivity;
 import test.activities.ExampleOneActivity;
 import test.activities.GetPackagesActivity;
+import test.activities.OpenPDFActivity;
 import test.activities.SystemInfoActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
         myItems.add(new MyItem("Example One", "this is to check recyclerView click", ExampleOneActivity.class));
         myItems.add(new MyItem("Get Package", "get list of application installed on the phone", GetPackagesActivity.class));
         myItems.add(new MyItem("System Info", "gives various information about system", SystemInfoActivity.class));
+        myItems.add(new MyItem("Open PDF", "tries to open a pdf from assets", OpenPDFActivity.class));
+        myItems.add(new MyItem("Create PDF 101", "Create a pdf file 101 test",
+                CreatePDF101Activity.class));
+        myItems.add(new MyItem("Create PDF table 102", "Create a pdf table 102",CreatePDFTableActivity.class));
+        myItems.add(new MyItem("Create PDF 103", "Create a pdf table 103",CreatePDF103Activity.class));
+        myItems.add(new MyItem("Create PDF 104", "Create a pdf table 104",CreatePDF104Activity.class));
+        myItems.add(new MyItem("Create PDF 105", "Create a pdf table 105",CreatePDF105Activity.class));
         MyListAdapter myListAdapter = new MyListAdapter(getApplicationContext(), myItems);
         recyclerView.setAdapter(myListAdapter);
 

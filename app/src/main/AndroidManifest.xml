@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pankajnimgade.pankajtestapp">
+          package="com.example.pankajnimgade.pankajtestapp">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -13,9 +16,9 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
@@ -25,7 +28,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity" />
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
         </activity>
         <activity
             android:name="test.activities.GetPackagesActivity"
@@ -34,7 +37,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity" />
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
         </activity>
         <activity
             android:name="test.activities.SystemInfoActivity"
@@ -43,7 +46,60 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity" />
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="test.activities.OpenPDFActivity"
+            android:label="Open PDF"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="test.activities.CreatePDF101Activity"
+            android:label="Create PDF 101"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="test.activities.CreatePDFTableActivity"
+            android:label="Create PDF Table 102"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="test.activities.CreatePDF103Activity"
+            android:label="Create PDF 103"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="test.activities.CreatePDF104Activity"
+            android:label="Create PDF 104"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity android:name="test.activities.CreatePDF105Activity"
+                  android:label="Create PDF 105"
+                  android:parentActivityName=".MainActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
         </activity>
     </application>
 
