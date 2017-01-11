@@ -156,10 +156,10 @@ public class CreatePDF105Activity extends AppCompatActivity {
 
         // write Patient information
         int patient_info_left = rect_first.left +PageConfiguration.SPACING_BETWEEN_SECTION;
-        float patient_info_top = rect_first.top + PageConfiguration.SPACING_BETWEEN_SECTION;
+        float patient_info_top = rect_first.top + PageConfiguration.SPACING_BETWEEN_LINES_SMALL;
         myCanvas.drawText("Jhon Reacher", patient_info_left, (int) patient_info_top, getWhiteSmallPaint());
         // write Patient information
-        patient_info_top += PageConfiguration.SPACING_BETWEEN_LINES;
+        patient_info_top += PageConfiguration.SPACING_BETWEEN_LINES_SMALL;
         Date date = Calendar.getInstance().getTime();
 
         myCanvas.drawText(PageConfiguration.simpleDateFormat.format(date), patient_info_left,

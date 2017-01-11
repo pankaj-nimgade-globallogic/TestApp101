@@ -23,6 +23,7 @@ import test.activities.CreatePDF101Activity;
 import test.activities.CreatePDF103Activity;
 import test.activities.CreatePDF104Activity;
 import test.activities.CreatePDF105Activity;
+import test.activities.CreatePDF107Activity;
 import test.activities.CreatePDFTableActivity;
 import test.activities.ExampleOneActivity;
 import test.activities.GetPackagesActivity;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         myItems.add(new MyItem("Create PDF 101", "Create a pdf file 101 test",
                 CreatePDF101Activity.class));
         myItems.add(new MyItem("Create PDF table 102", "Create a pdf table 102",CreatePDFTableActivity.class));
+        myItems.add(new MyItem("Create PDF 107", "Create a pdf table 107",CreatePDF107Activity.class));
         myItems.add(new MyItem("Create PDF 105", "Create a pdf table 105",CreatePDF105Activity.class));
         myItems.add(new MyItem("Create PDF 103", "Create a pdf table 103",CreatePDF103Activity.class));
         myItems.add(new MyItem("Create PDF 104", "Create a pdf table 104",CreatePDF104Activity.class));

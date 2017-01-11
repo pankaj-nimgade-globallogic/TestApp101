@@ -126,12 +126,12 @@ public class CreatePDF103Activity extends AppCompatActivity {
             myCanvas.drawText("Reacher, Jack", patient_X, patient_Y, getWhiteSmallPaint());
             Date time = Calendar.getInstance().getTime();
 
-            patient_Y += PageConfiguration.SPACING_BETWEEN_LINES;
+            patient_Y += PageConfiguration.SPACING_BETWEEN_LINES_MEDIUM;
             myCanvas.drawText(PageConfiguration.simpleDateFormat.format(time),
                     patient_X,
                     patient_Y,
                     getWhiteSmallPaint());
-            patient_Y += PageConfiguration.SPACING_BETWEEN_LINES;
+            patient_Y += PageConfiguration.SPACING_BETWEEN_LINES_MEDIUM;
             myCanvas.drawText("Mobile Serial Number",
                     patient_X,
                     patient_Y,
