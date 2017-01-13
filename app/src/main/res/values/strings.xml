@@ -6,4 +6,7 @@
               expectSameForAllLanguages="true"
               isApproved="true"
               where="about: pump: device">SYNCHROMED II<sup><small>&#174;</small></sup></string>
+    <string name="huge_text">The principle purpose of the introduction is to present your
+        position</string>
+
 </resources>

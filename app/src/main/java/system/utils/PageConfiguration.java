@@ -69,6 +69,12 @@ public class PageConfiguration {
         return paint;
     }
 
+    public static Paint getPaintBlueLow() {
+        Paint paint = new Paint();
+        paint.setColor(PageConfiguration.COLOR_BLUE_LIGHT);
+        return paint;
+    }
+
     public static Paint getPaintBlueHigh() {
         Paint paint = new Paint();
         paint.setColor(PageConfiguration.COLOR_BLUE_HIGH);

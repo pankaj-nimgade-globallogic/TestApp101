@@ -102,8 +102,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
         </activity>
-        <activity android:name="test.activities.CreatePDF107Activity"
-                  android:label="Create PDF 107"
+        <activity
+            android:name="test.activities.CreatePDF107Activity"
+            android:label="Create PDF 107"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity android:name="test.activities.CreatePDF108Activity"
+                  android:label="Create PDF 108"
                   android:parentActivityName=".MainActivity"
                   android:theme="@style/AppTheme.NoActionBar">
             <meta-data
