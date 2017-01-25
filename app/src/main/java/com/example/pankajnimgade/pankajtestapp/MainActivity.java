@@ -20,12 +20,15 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import system.utils.pack110.CreatePDF110Activity;
+import system.utils.pack111.CreatePDF111Activity;
 import test.activities.CreatePDF101Activity;
 import test.activities.CreatePDF103Activity;
 import test.activities.CreatePDF104Activity;
 import test.activities.CreatePDF105Activity;
 import test.activities.CreatePDF107Activity;
 import test.activities.CreatePDF108Activity;
+import test.activities.CreatePDF109Activity;
 import test.activities.CreatePDFTableActivity;
 import test.activities.ExampleOneActivity;
 import test.activities.GetPackagesActivity;
@@ -68,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
         myItems.add(new MyItem("Create PDF 101", "Create a pdf file 101 test",
                 CreatePDF101Activity.class));
         myItems.add(new MyItem("Create PDF table 102", "Create a pdf table 102",CreatePDFTableActivity.class));
+        myItems.add(new MyItem("Create PDF 111", "Create a pdf table 111",CreatePDF111Activity.class));
+        myItems.add(new MyItem("Create PDF 110", "Create a pdf table 110",CreatePDF110Activity.class));
+        myItems.add(new MyItem("Create PDF 109", "Create a pdf table 109",CreatePDF109Activity.class));
         myItems.add(new MyItem("Create PDF 108", "Create a pdf table 108",CreatePDF108Activity.class));
         myItems.add(new MyItem("Create PDF 107", "Create a pdf table 107",CreatePDF107Activity.class));
         myItems.add(new MyItem("Create PDF 105", "Create a pdf table 105",CreatePDF105Activity.class));

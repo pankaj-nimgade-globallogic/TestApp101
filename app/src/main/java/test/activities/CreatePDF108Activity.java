@@ -7,9 +7,9 @@ import android.graphics.Rect;
 import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +26,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import system.utils.MyItemForTable;
 import system.utils.MyTable;
 import system.utils.PageConfiguration;
 
@@ -103,18 +104,27 @@ public class CreatePDF108Activity extends AppCompatActivity {
                 PdfDocument.Page page = createPage(pdfDocument, pageNumber);
                 Canvas canvas = page.getCanvas();
                 List<MyTable.Column> columns = new ArrayList<>();
-                columns.add(new MyTable.Column(50, Paint.Align.CENTER));
-                columns.add(new MyTable.Column(50, Paint.Align.CENTER));
+                columns.add(new MyTable.Column(50, Paint.Align.CENTER, "Name 1"));
+                columns.add(new MyTable.Column(50, Paint.Align.CENTER, "Name 2"));
                 try {
                     MyTable myTable = new MyTable(columns, 200, canvas);
+                    myTable.getBackgroundPaint().setColor
+                            (PageConfiguration.COLOR_BLUE_LIGHT);
+                    myTable.setPatternOn(true);
                     Rect rect = new Rect(PageConfiguration.MARGIN_LEFT, CURRENT_CONTENT_Y,
-                            PageConfiguration.MARGIN_LEFT+myTable.getTablesWidth(),
-                            CURRENT_CONTENT_Y+PageConfiguration.SPACING_BETWEEN_LINES_MEDIUM);
+                            PageConfiguration.MARGIN_LEFT + myTable.getTablesWidth(),
+                            CURRENT_CONTENT_Y + PageConfiguration.SPACING_BETWEEN_LINES_MEDIUM);
                     CURRENT_CONTENT_Y = myTable.drawLine(CURRENT_CONTENT_Y);
-                    ArrayList<String> strings= new ArrayList();
-                    strings.add("First");
-                    strings.add("Second");
-                    CURRENT_CONTENT_Y = myTable.writeRecord(strings, CURRENT_CONTENT_Y);
+                    List<MyItemForTable> myItemForTables = MyItemForTable.getListOfItems();
+
+                    CURRENT_CONTENT_Y = myTable.writeColumnsTitle(CURRENT_CONTENT_Y);
+                    for (MyItemForTable myItemForTable : myItemForTables) {
+
+                        ArrayList<String> strings = new ArrayList();
+                        strings.add(myItemForTable.getName1());
+                        strings.add(myItemForTable.getName2());
+                        CURRENT_CONTENT_Y = myTable.writeRecord(strings, CURRENT_CONTENT_Y);
+                    }
 
 
                 } catch (MyTable.SymmetryException e) {
@@ -181,7 +191,7 @@ public class CreatePDF108Activity extends AppCompatActivity {
                 int patient_data_X = header_X + deviation_x;
                 // print patient information
                 paintBlueMedium.setColor(PageConfiguration.COLOR_BLUE_HIGH);
-                paintBlueMedium.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+                paintBlueMedium.setTextSize(PageConfiguration.FONT_SIZE_NORMAL);
                 paintBlueMedium.setFakeBoldText(true);
                 header_Y += PageConfiguration.SPACING_BETWEEN_SECTION;
                 myCanvas.drawText("PATIENT:", header_X, header_Y, paintBlueMedium);
@@ -213,7 +223,7 @@ public class CreatePDF108Activity extends AppCompatActivity {
                     (2 * PageConfiguration.MARGIN_LEFT)) * (4f / 5f));
             int page_y = PageConfiguration.MARGIN_TOP + PageConfiguration.SPACING_BETWEEN_SECTION;
             paintBlueMedium.setFakeBoldText(false);
-            paintBlueMedium.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+            paintBlueMedium.setTextSize(PageConfiguration.FONT_SIZE_NORMAL);
             myCanvas.drawText("Page  " + pageNumber + "  of  3", page_x, page_y, paintBlueMedium);
 
         }

@@ -154,7 +154,7 @@ public class CreatePDF107Activity extends AppCompatActivity {
                 int patient_data_X = header_X + deviation_x;
                 // print patient information
                 paintBlueMedium.setColor(PageConfiguration.COLOR_BLUE_HIGH);
-                paintBlueMedium.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+                paintBlueMedium.setTextSize(PageConfiguration.FONT_SIZE_NORMAL);
                 paintBlueMedium.setFakeBoldText(true);
                 header_Y += PageConfiguration.SPACING_BETWEEN_SECTION;
                 myCanvas.drawText("PATIENT:", header_X, header_Y, paintBlueMedium);
@@ -186,7 +186,7 @@ public class CreatePDF107Activity extends AppCompatActivity {
                     (2 * PageConfiguration.MARGIN_LEFT)) * (4f / 5f));
             int page_y = PageConfiguration.MARGIN_TOP + PageConfiguration.SPACING_BETWEEN_SECTION;
             paintBlueMedium.setFakeBoldText(false);
-            paintBlueMedium.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+            paintBlueMedium.setTextSize(PageConfiguration.FONT_SIZE_NORMAL);
             myCanvas.drawText("Page  " + pageNumber + "  of  3", page_x, page_y, paintBlueMedium);
 
         }

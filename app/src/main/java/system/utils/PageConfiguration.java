@@ -2,7 +2,6 @@ package system.utils;
 
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.SystemClock;
 
 import java.text.SimpleDateFormat;
 
@@ -19,8 +18,9 @@ public class PageConfiguration {
 
     //font
     public static final int HEADER_FONT_SIZE = 20;
-    public static final int NORMAL_FONT_SIZE = 10;
-    public static final int SMALL_FONT_SIZE = 8;
+    public static final int FONT_SIZE_HIGH = 14;
+    public static final int FONT_SIZE_NORMAL = 11;
+    public static final int FONT_SIZE_SMALL = 8;
     //margin
     public static final int MARGIN_TOP = PAGE_HEIGHT/12;
     public static final int MARGIN_RIGHT = PAGE_WIDTH/12;
@@ -31,6 +31,7 @@ public class PageConfiguration {
     public static final int SPACING_BETWEEN_LINES_SMALL = 10;
     public static final int SPACING_BETWEEN_LINES_MEDIUM = 15;
     public static final int SPACING_BETWEEN_SECTION = 20;
+    public static final int TEXT_MARGIN = 3;
     //color
     public static final int COLOR_WHITE = 0xFFFFFFFF;
     public static final int COLOR_BLUE_DARK = 0xFF001936;
@@ -84,14 +85,14 @@ public class PageConfiguration {
     public static Paint getWhiteSmallPaint() {
         Paint paint = new Paint();
         paint.setColor(PageConfiguration.COLOR_WHITE);
-        paint.setTextSize(PageConfiguration.SMALL_FONT_SIZE);
+        paint.setTextSize(PageConfiguration.FONT_SIZE_SMALL);
         return paint;
     }
 
     public static Paint getWhiteBoldColorPaint() {
         Paint paint = new Paint();
         paint.setColor(PageConfiguration.COLOR_WHITE);
-        paint.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+        paint.setTextSize(PageConfiguration.FONT_SIZE_NORMAL);
         paint.setFakeBoldText(true);
         return paint;
     }

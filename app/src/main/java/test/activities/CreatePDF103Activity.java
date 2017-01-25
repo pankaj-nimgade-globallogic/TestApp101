@@ -197,7 +197,7 @@ public class CreatePDF103Activity extends AppCompatActivity {
     private Paint getPageNumberHeaderPaint() {
         Paint paint = new Paint();
         paint.setColor(PageConfiguration.COLOR_BLUE_HIGH);
-        paint.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+        paint.setTextSize(PageConfiguration.FONT_SIZE_NORMAL);
         paint.setTextAlign(Paint.Align.RIGHT);
         paint.setFakeBoldText(true);
         return paint;
@@ -212,14 +212,14 @@ public class CreatePDF103Activity extends AppCompatActivity {
     private Paint getWhiteSmallPaint() {
         Paint paint = new Paint();
         paint.setColor(PageConfiguration.COLOR_WHITE);
-        paint.setTextSize(PageConfiguration.SMALL_FONT_SIZE);
+        paint.setTextSize(PageConfiguration.FONT_SIZE_SMALL);
         return paint;
     }
 
     private Paint getWhiteBoldColorPaint() {
         Paint paint = new Paint();
         paint.setColor(PageConfiguration.COLOR_WHITE);
-        paint.setTextSize(PageConfiguration.NORMAL_FONT_SIZE);
+        paint.setTextSize(PageConfiguration.FONT_SIZE_NORMAL);
         paint.setFakeBoldText(true);
         return paint;
     }

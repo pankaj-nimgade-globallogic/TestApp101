@@ -1,4 +1,4 @@
-package system.utils;
+package system.utils.pack110;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -6,6 +6,8 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 
 import java.util.List;
+
+import system.utils.PageConfiguration;
 
 /**
  * Created by pankaj.nimgade on 12-01-2017.

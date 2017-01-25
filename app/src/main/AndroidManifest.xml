@@ -111,10 +111,38 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
         </activity>
-        <activity android:name="test.activities.CreatePDF108Activity"
-                  android:label="Create PDF 108"
-                  android:parentActivityName=".MainActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name="test.activities.CreatePDF108Activity"
+            android:label="Create PDF 108"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="test.activities.CreatePDF109Activity"
+            android:label="Create PDF 109"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="system.utils.pack110.CreatePDF110Activity"
+            android:label="Create PDF 110"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="system.utils.pack111.CreatePDF111Activity"
+            android:label="Create PDF 111"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pankajnimgade.pankajtestapp.MainActivity"/>
